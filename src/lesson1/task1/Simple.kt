@@ -47,10 +47,12 @@ fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
 /**
  * Пример главной функции
  */
+
 fun main(args: Array<String>) {
-    val x1x2 = quadraticRootProduct(1.0, 13.0, 42.0)
-    println("Root product: $x1x2")
+    val result = sqr(8)
+    println("8*8 = $result")
 }
+
 
 /**
  * Тривиальная
@@ -100,7 +102,13 @@ fun thirdDigit(number: Int): Int = TODO()
  * прибыл на станцию назначения в h2 часов m2 минут того же дня (например в 13:01).
  * Определите время поезда в пути в минутах (в данном случае 216).
  */
-fun travelMinutes(hoursDepart: Int, minutesDepart: Int, hoursArrive: Int, minutesArrive: Int): Int = TODO()
+fun travelMinutes(hoursDepart: Int, minutesDepart: Int, hoursArrive: Int, minutesArrive: Int): Int {
+    val i = hoursDepart * 60 + minutesDepart
+    val m = hoursArrive * 60 + minutesArrive
+    val c = m - i
+    return c
+}
+
 
 /**
  * Простая
